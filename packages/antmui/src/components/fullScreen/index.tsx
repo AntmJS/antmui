@@ -1,8 +1,6 @@
 import type { FullScreenProps, IFullScreenRef } from '../../../types/fullScreen'
 import { View } from '@tarojs/components'
-
 import { useRef, LegacyRef, useState } from 'react'
-import Icon from '../icon'
 
 export default function Index(props: FullScreenProps) {
   const { children, className, cref, ...others } = props
@@ -28,11 +26,6 @@ export default function Index(props: FullScreenProps) {
       } ${className || ''}`}
       {...others}
     >
-      <Icon
-        className="antmui-full-screen-close"
-        name="antmui-round-arrow-fill"
-        onClick={() => actionRef.current.hide()}
-      />
       {children}
     </View>
   )
