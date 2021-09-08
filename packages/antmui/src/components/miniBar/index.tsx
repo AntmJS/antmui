@@ -1,7 +1,7 @@
+import type { MiniBarProps } from '../../../types/miniBar.d'
 import { useEffect, useState, useCallback } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
-import type { MiniBarProps } from '../../../types/miniBar.d'
 
 declare const getCurrentPages: any
 

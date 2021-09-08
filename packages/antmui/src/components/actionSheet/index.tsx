@@ -1,5 +1,5 @@
-import { View, Text } from '@tarojs/components'
 import type { ActionSheetProps } from '../../../types/actionSheet'
+import { View, Text } from '@tarojs/components'
 import { useMask } from '../../utils'
 
 export default function Index(props: ActionSheetProps) {

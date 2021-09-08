@@ -1,5 +1,5 @@
-import { ButtonProps, CommonEventFunction } from '@tarojs/components'
 import type { MiniPhoneButtonProps } from '../../../types/button.d'
+import { ButtonProps, CommonEventFunction } from '@tarojs/components'
 import Button from './index'
 
 declare const my: any

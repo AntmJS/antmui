@@ -1,6 +1,6 @@
+import type ANTMUI from '../../types/normal'
 import { useCallback, useRef, useState } from 'react'
 import { nextTick, createSelectorQuery, SelectorQuery } from '@tarojs/taro'
-import type ANTMUI from '../../types/normal'
 
 export function useFadeIn(ref: any) {
   return useCallback(

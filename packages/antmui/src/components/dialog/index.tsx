@@ -1,5 +1,5 @@
-import { View } from '@tarojs/components'
 import type { DialogProps } from '../../../types/dialog'
+import { View } from '@tarojs/components'
 import Icon from '../icon'
 import { useMask } from '../../utils'
 

@@ -1,5 +1,5 @@
-import { Button } from '@tarojs/components'
 import type { ButtonProps } from '../../../types/button.d'
+import { Button } from '@tarojs/components'
 import Loading from '../loading'
 
 export default function Index(props: ButtonProps = { children: '' }) {

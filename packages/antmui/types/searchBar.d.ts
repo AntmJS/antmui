@@ -1,5 +1,5 @@
-import { ComponentClass } from 'react'
 import type { InputProps } from '@tarojs/components/types/Input'
+import { ComponentClass } from 'react'
 import ANTMUI from './normal'
 
 export interface SearchBarProps

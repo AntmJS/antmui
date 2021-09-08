@@ -1,5 +1,5 @@
-import { View, Text } from '@tarojs/components'
 import type { HalfScreenProps } from '../../../types/halfScreen'
+import { View, Text } from '@tarojs/components'
 import { useMask } from '../../utils'
 import Icon from '../icon'
 

@@ -1,5 +1,5 @@
-import { View, Text } from '@tarojs/components'
 import type { ModalProps } from '../../../types/modal'
+import { View, Text } from '@tarojs/components'
 import { useMask } from '../../utils'
 
 export default function Index(props: ModalProps) {

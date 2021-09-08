@@ -1,7 +1,7 @@
+import type { MiniUserButtonProps } from '../../../types/button.d'
 import { useEffect, useState } from 'react'
 import Taro from '@tarojs/taro'
 import { ButtonProps, CommonEventFunction } from '@tarojs/components'
-import type { MiniUserButtonProps } from '../../../types/button.d'
 import Button from './index'
 
 declare const my: any

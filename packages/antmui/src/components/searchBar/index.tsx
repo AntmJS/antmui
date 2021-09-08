@@ -1,3 +1,5 @@
+import type { InputProps } from '@tarojs/components/types/Input'
+import type { SearchBarProps } from '../../../types/searchBar.d'
 import { useCallback, useState } from 'react'
 import {
   Input,
@@ -6,8 +8,6 @@ import {
   View,
   Text,
 } from '@tarojs/components'
-import type { InputProps } from '@tarojs/components/types/Input'
-import type { SearchBarProps } from '../../../types/searchBar.d'
 import Icon from '../icon'
 
 export default function Index(props: SearchBarProps) {
