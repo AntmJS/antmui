@@ -1,6 +1,6 @@
 {
   "name": "antmui-demo",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "private": true,
   "description": "Taro应用模版",
   "templateInfo": {
@@ -106,7 +106,7 @@
     "build": ""
   },
   "dependencies": {
-    "@antmjs/antmui": "1.10.0",
+    "@antmjs/antmui": "1.10.1",
     "@antmjs/cache": "1.9.4",
     "@antmjs/global-state": "1.9.4",
     "@antmjs/mini-fix": "1.9.4",
