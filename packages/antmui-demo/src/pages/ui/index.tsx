@@ -26,6 +26,8 @@ import {
   IDialogRef,
   HalfScreen,
   IHalfScreenRef,
+  FullScreen,
+  IFullScreenRef,
   Badge,
   Progress,
   Calendar,
@@ -64,6 +66,7 @@ export default function Index() {
   const dialogRef = useRef<IDialogRef>()
   const messageRef = useRef<IMessageRef>()
   const halfScreenRef = useRef<IHalfScreenRef>()
+  const fullScreenRef = useRef<IFullScreenRef>()
   useEffect(function () {
     console.info('index page load')
     return function () {
@@ -229,6 +232,15 @@ export default function Index() {
         size="around"
         type="primary"
         onClick={() => {
+          fullScreenRef.current!.show()
+        }}
+      >
+        fullScreen
+      </Button>
+      <Button
+        size="around"
+        type="primary"
+        onClick={() => {
           dialogRef.current!.show()
         }}
       >
@@ -375,7 +387,7 @@ export default function Index() {
       </View>
       <View>
         antmui-round-check-fill
-        <Icon name="" />
+        <Icon name="antmui-round-check-fill" />
       </View>
       <View>
         antmui-round-check
@@ -516,6 +528,7 @@ export default function Index() {
       >
         这里是内容
       </Dialog>
+      <FullScreen cref={fullScreenRef}>mmmmm</FullScreen>
       <HalfScreen
         cref={halfScreenRef}
         onConfirm={() => {

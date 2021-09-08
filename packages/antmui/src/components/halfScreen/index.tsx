@@ -27,8 +27,8 @@ export default function Index(props: HalfScreenProps) {
         }}
       ></View>
       <View
-        className={`antmui-half-screen-dialog antmui-slideup-default ${
-          isShowMask ? 'antmui-slideup-show' : ''
+        className={`antmui-half-screen-dialog ${
+          isShowMask ? 'antmui-half-screen-slideup-show' : ''
         } ${className || ''}`}
         {...others}
       >

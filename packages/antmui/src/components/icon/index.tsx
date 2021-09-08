@@ -5,7 +5,7 @@ export default function Index(props: IconProps) {
   const { fontFamily = 'antmuifont', name, className, ...others } = props
   let activeCls = ''
   if (others.onClick) {
-    activeCls = name + '-active'
+    activeCls = 'active'
   }
   return (
     <Text

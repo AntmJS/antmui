@@ -1,0 +1,30 @@
+/* stylelint-disable */
+@import './icon.less';
+
+.antmui-full-screen-dialog {
+  z-index: @antmuiZIndexDialog;
+  background-color: @antmuiFullScreenBgColor;
+  line-height: 1.4;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  transform: translate(0, 100%);
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+}
+
+.antmui-full-screen-close {
+  position: fixed;
+  right: 40px;
+  bottom: 80px;
+  font-size: 100px;
+  transform: rotate(90deg);
+}
+
+.antmui-full-screen-slideup-show {
+  transform: translate(0, 0);
+}

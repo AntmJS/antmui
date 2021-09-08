@@ -31,6 +31,7 @@ export {
 export { SearchBar } from './searchBar.d'
 export { ActionSheet, ActionSheetItem, IActionSheetRef } from './actionSheet.d'
 export { HalfScreen, IHalfScreenRef } from './halfScreen.d'
+export { FullScreen, IFullScreenRef } from './fullScreen.d'
 export { Modal, IModalRef } from './modal.d'
 export { Dialog, IDialogRef } from './dialog.d'
 export { Badge } from './badge.d'
