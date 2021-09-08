@@ -134,6 +134,7 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@antmjs/babel-preset": "^1.12.0",
     "@antmjs/eslint": "^1.12.0",
     "@antmjs/stylelint": "^1.12.0"
   }

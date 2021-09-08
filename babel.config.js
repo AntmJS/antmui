@@ -1,10 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { resolve } = require('path')
-
 module.exports = {
   presets: [
     [
-      resolve('../babel-preset'),
+      require('@antmjs/babel-preset'),
       {
         presets: {
           env: {
