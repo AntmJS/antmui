@@ -1,6 +1,6 @@
 {
   "name": "@antmjs/antmui",
-  "version": "1.9.5",
+  "version": "1.10.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "types/index.d.ts",
