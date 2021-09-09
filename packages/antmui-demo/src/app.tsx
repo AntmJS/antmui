@@ -1,5 +1,3 @@
-// apiFix放最上方，确保先更新一下
-import './apiFix'
 import { useDidShow, useDidHide } from '@tarojs/taro'
 import React, { useEffect } from 'react'
 import { Provider } from './store'
