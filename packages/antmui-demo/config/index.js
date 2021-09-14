@@ -108,7 +108,7 @@ let config = {
       mode: 'browser',
     },
     devServer: {
-      port: 10086,
+      port: 3333,
       hot: true,
       host: '0.0.0.0',
       historyApiFallback: true,

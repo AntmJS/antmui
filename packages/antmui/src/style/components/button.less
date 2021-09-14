@@ -1,248 +1,112 @@
-/* stylelint-disable selector-max-type, selector-max-attribute */
-@import './loading.less';
-
-.setDefaultButton(@color, @bgColor) {
-  // 重构Taro默认样式
-  &:not([disabled]):active {
-    color: @color;
-    background-color: @bgColor;
-  }
-
-  &[type='default'] {
-    color: @color;
-    background-color: @bgColor;
-    &:not([disabled]):visited {
-      color: @color;
+.antmui- {
+  &button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    height: auto;
+    padding: 14px 32px;
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity ease 0.15s;
+    user-select: none;
+    background: #ffffff;
+    &:focus {
+      outline: none;
     }
-    &:not([disabled]):active {
-      color: @color;
-      background-color: @bgColor;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      border: inherit;
+      border-color: #000000;
+      border-radius: inherit;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      content: ' ';
+      box-sizing: content-box;
+    }
+    &:active::before {
+      opacity: 0.1;
+    }
+
+    &-default {
+      color: #323233;
+      background-color: #ffffff;
+      border: 2px solid #ebedf0;
+    }
+
+    &-primary {
+      color: #ffffff;
+      background-color: #1989fa;
+      border: 2px solid #1989fa;
+    }
+
+    &-success {
+      color: #ffffff;
+      background-color: #07c160;
+      border: 2px solid #07c160;
+    }
+
+    &-warning {
+      color: #ffffff;
+      background-color: #ff976a;
+      border: 2px solid #ff976a;
+    }
+
+    &-danger {
+      color: #ffffff;
+      background-color: #ee0a24;
+      border: 2px solid #ee0a24;
+    }
+
+    &-plain {
+      background-color: #ffffff;
+    }
+    &-plain.antmui-button-primary {
+      color: #1989fa;
+      &::after {
+        border-color: #1989fa;
+      }
+    }
+    &-plain.antmui-button-warning {
+      color: #ff976a;
+      &::after {
+        border-color: #ff976a;
+      }
+    }
+    &-plain.antmui-button-danger {
+      color: #ee0a24;
+      &::after {
+        border-color: #ee0a24;
+      }
+    }
+    &-hairline {
+      border-width: 0;
+      &::after {
+        position: absolute;
+        box-sizing: border-box;
+        content: ' ';
+        pointer-events: none;
+        top: -50%;
+        right: -50%;
+        bottom: -50%;
+        left: -50%;
+        border: 2px solid #323233;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        border-width: 2px;
+      }
+    }
+
+    &-disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
   }
-}
-
-.antmui-btn {
-  height: auto;
-  outline: 0;
-  border-width: 0;
-  appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  position: relative;
-  width: @antmuiBtnWidth;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  font-weight: bold;
-  font-size: @antmuiBtnFontSize;
-  line-height: 1.5;
-  padding: @antmuiBtnGap;
-  text-align: center;
-  text-decoration: none;
-  border-radius: @antmuiBtnBorderRadius;
-  overflow: hidden;
-  .setCenter();
-  &:focus {
-    outline: 0;
-  }
-  &::after {
-    border: none;
-  }
-}
-.antmui-btn_block {
-  width: auto;
-}
-.antmui-btn_inline {
-  display: inline-block;
-}
-
-.antmui-btn_default {
-  color: @antmuiBtnDefaultColor;
-  background-color: @antmuiBtnDefaultBgColor;
-  .setDefaultButton(@antmuiBtnDefaultColor, @antmuiBtnDefaultBgColor);
-  &:not(.antmui-btn_disabled):visited {
-    color: @antmuiBtnDefaultColor;
-  }
-  &:not(.antmui-btn_disabled):active {
-    background-color: overlay(rgba(0, 0, 0, 0.06), @antmuiBtnDefaultBgColor);
-  }
-}
-
-.antmui-btn_primary {
-  color: @antmuiBtnPrimaryColor;
-  background-color: @antmuiBtnPrimaryBgColor;
-  .setDefaultButton(@antmuiBtnPrimaryColor, @antmuiBtnPrimaryBgColor);
-
-  &:not(.antmui-btn_disabled):visited {
-    color: @antmuiBtnPrimaryColor;
-  }
-  &:not(.antmui-btn_disabled):active {
-    background-color: overlay(rgba(0, 0, 0, 0.06), @antmuiBtnPrimaryBgColor);
-  }
-}
-
-.antmui-btn_warn {
-  color: @antmuiBtnWarnColor;
-  background-color: @antmuiBtnWarnBgColor;
-  .setDefaultButton(@antmuiBtnWarnColor, @antmuiBtnWarnBgColor);
-  &:not(.antmui-btn_disabled):visited {
-    color: @antmuiBtnWarnColor;
-  }
-  &:not(.antmui-btn_disabled):active {
-    background-color: overlay(rgba(0, 0, 0, 0.06), @antmuiBtnWarnBgColor);
-  }
-}
-
-.antmui-btn_cell {
-  height: auto;
-  outline: 0;
-  border-width: 0;
-  border-radius: 0;
-  appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  text-align: center;
-  text-decoration: none;
-  font-size: @antmuiBtnFontSize;
-  line-height: @antmuiBtnLineHeight;
-  padding: @antmuiBtnGap;
-  .setCenter();
-  &:focus {
-    outline: 0;
-  }
-  &::after {
-    border: none;
-  }
-
-  overflow: hidden;
-  & + & {
-    margin-top: @antmuiBtnDefaultGap;
-  }
-}
-.antmui-btn_cell__icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: (24px * @hd);
-  height: (24px * @hd);
-  margin: -(3px * @hd) (8px * @hd) 0 0;
-}
-
-.antmui-btn_cell-default {
-  color: @antmuiBtnCellDefaultColor;
-  background-color: @antmuiBtnCellDefaultBgColor;
-  .setDefaultButton(@antmuiBtnCellDefaultColor, @antmuiBtnCellDefaultBgColor);
-  &:not(.antmui-btn_disabled):visited {
-    color: @antmuiBtnCellDefaultColor;
-  }
-  &:not(.antmui-btn_disabled):active {
-    background-color: overlay(
-      rgba(0, 0, 0, 0.06),
-      @antmuiBtnCellDefaultBgColor
-    );
-  }
-}
-.antmui-btn_cell-primary {
-  color: @antmuiBtnCellPrimaryColor;
-  background-color: @antmuiBtnCellDefaultBgColor;
-  .setDefaultButton(@antmuiBtnCellPrimaryColor, @antmuiBtnCellDefaultBgColor);
-  &:not(.antmui-btn_disabled):visited {
-    color: @antmuiBtnCellPrimaryColor;
-  }
-  &:not(.antmui-btn_disabled):active {
-    background-color: overlay(
-      rgba(0, 0, 0, 0.06),
-      @antmuiBtnCellPrimaryBgColor
-    );
-  }
-}
-.antmui-btn_cell-warn {
-  color: @antmuiBtnCellWarnColor;
-  background-color: @antmuiBtnCellDefaultBgColor;
-  .setDefaultButton(@antmuiBtnCellWarnColor, @antmuiBtnCellDefaultBgColor);
-  &:not(.antmui-btn_disabled):visited {
-    color: @antmuiBtnCellWarnColor;
-  }
-  &:not(.antmui-btn_disabled):active {
-    background-color: overlay(rgba(0, 0, 0, 0.06), @antmuiBtnCellWarnBgColor);
-  }
-}
-
-.antmui-btn_disabled {
-  .setDisabled();
-
-  color: @antmuiBtnDisabledColor;
-  background-color: @antmuiBtnDisabledBgColor;
-  .setDefaultButton(@antmuiBtnDisabledColor, @antmuiBtnDisabledBgColor);
-}
-
-.antmui-btn_loading {
-  .antmui-primary-loading {
-    margin: -(3px * @hd) (8px * @hd) 0 0;
-    vertical-align: middle;
-  }
-  &.antmui-btn_primary {
-    background-color: overlay(rgba(0, 0, 0, 0.06), @antmuiBtnPrimaryBgColor);
-  }
-  &.antmui-btn_default {
-    background-color: overlay(rgba(0, 0, 0, 0.06), @antmuiBtnDefaultBgColor);
-  }
-  &.antmui-btn_warn {
-    background-color: overlay(rgba(0, 0, 0, 0.06), @antmuiBtnWarnBgColor);
-  }
-  &.antmui-btn_cell-primary {
-    background-color: overlay(
-      rgba(0, 0, 0, 0.06),
-      @antmuiBtnCellPrimaryBgColor
-    );
-  }
-  &.antmui-btn_cell-default {
-    background-color: overlay(
-      rgba(0, 0, 0, 0.06),
-      @antmuiBtnCellPrimaryBgColor
-    );
-  }
-  &.antmui-btn_cell-warn {
-    background-color: overlay(
-      rgba(0, 0, 0, 0.06),
-      @antmuiBtnCellPrimaryBgColor
-    );
-  }
-}
-
-.antmui-btn_mini {
-  display: inline-block;
-  width: auto;
-  font-size: @antmuiBtnMiniFontSize;
-  line-height: @antmuiBtnMiniLineHeight;
-  padding: @antmuiBtnGap;
-}
-
-.antmui-btn_around {
-  width: auto;
-  margin-left: (12px * @hd);
-  margin-right: (12px * @hd);
-}
-
-/* gap between btn */
-.antmui-btn:not(.antmui-btn_mini) + .antmui-btn:not(.antmui-btn_mini) {
-  margin-top: @antmuiBtnDefaultGap;
-}
-
-.antmui-btn.antmui-btn_inline + .antmui-btn.antmui-btn_inline {
-  margin-top: auto;
-  margin-left: @antmuiBtnDefaultGap;
-}
-
-.antmui-btn-area {
-  margin: (48px * @hd) @antmuiBtnDefaultGap (8px * @hd);
-}
-
-.antmui-btn_reset {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  outline: 0;
 }

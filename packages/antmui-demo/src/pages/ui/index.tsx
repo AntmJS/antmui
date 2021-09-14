@@ -82,6 +82,7 @@ export default function Index() {
 
   return (
     <View className="pages-index-index">
+      666123
       {process.env.TARO_ENV !== 'h5' && (
         <MiniBar fixed homeUrl="pages/ui/index" title="首页" />
       )}
